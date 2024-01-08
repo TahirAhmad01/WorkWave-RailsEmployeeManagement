@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-header px-4 py-3">
+    <h2 class="">Employee lists</h2>
+  </div>
+
+  <div class="px-4 py-4"><table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">name</th>
+      <th scope="col">email</th>
+      <th scope="col">address</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @employees.each do |employee| %>
+      <tr>
+        <th scope="row"><%= employee.id %></th>
+        <td><%= employee.name %></td>
+        <td><%= employee.personal_email %></td>
+        <td><%= employee.full_address %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table></div>
+</div>

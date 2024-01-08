@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get "contact-us" => 'pages#contact_us'
   get "privacy-policy" => 'pages#privecy_policy'
   get "terms-and-condition" => 'pages#terms_and_condition'
+
+  resources :employees
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

@@ -7,3 +7,27 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+employee = Employee.create(
+  first_name: "tahir",
+  middle_name: "ahmad",
+  last_name: "sani",
+  personal_email: "sani@a.com",
+  city:"natore",
+  state: "raj",
+  country: "bd",
+  pincode: "565656",
+  address_line_1: "dfs",
+  address_line_2: "sfsdfs",
+)
+
+employee = Employee.create(
+  first_name: "jahid",
+  last_name: "hasan",
+  personal_email: "sani@a.com",
+  city:"natore",
+  state: "raj",
+  country: "bd",
+  pincode: "565656",
+  address_line_1: "dfs",
+  address_line_2: "sfsdfs",
+  )
