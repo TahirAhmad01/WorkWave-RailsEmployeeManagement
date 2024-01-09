@@ -1,0 +1,26 @@
+<h1 class="mb-5 text-center">Employee info</h1>
+
+<div class="card mb-3">
+
+  <div class="row p-4">
+    <div class="col-md-6">
+      <h4>Personal info</h4>
+      <div class="lead"><strong>First Name: </strong> <%= @employee.first_name %></div>
+      <div class="lead"><strong>middle Name: </strong> <%= @employee.middle_name.present? ? @employee.middle_name : "--N/A--" %></div>
+      <div class="lead"><strong>Last Name: </strong> <%= @employee.last_name %></div>
+      <div class="lead"><strong>Personal Email: </strong> <%= @employee.personal_email %></div>
+    </div>
+    <div class="col-md-6">
+      <h4>Address info</h4>
+      <div class="lead"><strong>Address Line1: </strong> <%= @employee.address_line_1 %></div>
+      <div class="lead"><strong>Address Line2: </strong> <%= @employee.address_line_2.present? ? @employee.address_line_2 : "--N/A--" %></div>
+      <div class="lead"><strong>city: </strong> <%= @employee.city %></div>
+      <div class="lead"><strong>state: </strong> <%= @employee.state %></div>
+      <div class="lead"><strong>country: </strong> <%= @employee.country %></div>
+      <div class="lead"><strong>pin code: </strong> <%= @employee.pincode %></div>
+    </div>
+  </div>
+</div>
+
+<%= link_to "Edit Employee", edit_employee_path(@employee), class: "btn btn-primary" %>
+<%= link_to "Back to Employee", employees_path, class: "btn btn-outline-primary" %>
