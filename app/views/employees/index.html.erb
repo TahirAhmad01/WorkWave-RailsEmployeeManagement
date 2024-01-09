@@ -1,6 +1,10 @@
+<%= flash[:notice] %>
 <div class="card">
-  <div class="card-header px-4 py-3">
-    <h2 class="">Employee lists</h2>
+  <div class="card-header px-4 py-3 w-full">
+    <div class="d-flex justify-content-between align-items-center ">
+    <h3 class="">Employee lists</h3>
+    <%= link_to "Create New Employee", new_employee_path, class: "btn btn-primary" %>
+    </div>
   </div>
 
   <div class="px-4 py-4"><table class="table table-striped">

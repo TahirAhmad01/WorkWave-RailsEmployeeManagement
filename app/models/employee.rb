@@ -8,6 +8,6 @@ class Employee < ApplicationRecord
   end
 
   def full_address
-    "#{address_line_2}, #{city}, #{state}, #{country}, #{pincode}".strip
+    "#{address_line_1}, #{city}, #{state}, #{country}, #{pincode}".strip
   end
 end
