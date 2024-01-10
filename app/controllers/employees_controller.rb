@@ -1,8 +1,5 @@
 class EmployeesController < ApplicationController
   before_action :set_employee, only: [:edit, :update, :show, :destroy]
-  def index
-    @employees = Employee.all
-  end
 
   def new
     @employee = Employee.new
