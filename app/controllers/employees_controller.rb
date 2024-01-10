@@ -47,5 +47,8 @@ class EmployeesController < ApplicationController
 
   def set_employee
     @employee = Employee.find(params[:id])
+  rescue ActiveRecord::RecordNotFound => error
+    redirect_to employees_path, notice: error
   end
+
 end

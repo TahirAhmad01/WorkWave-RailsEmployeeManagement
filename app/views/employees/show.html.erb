@@ -23,4 +23,5 @@
 </div>
 
 <%= link_to "Edit Employee", edit_employee_path(@employee), class: "btn btn-primary" %>
+<%= link_to "Delete Employee", employee_path(@employee), class: "btn btn-danger", method: :delete, data: {confirm: "Are you sure to delete this employee?"} %>
 <%= link_to "Back to Employee", employees_path, class: "btn btn-outline-primary" %>
