@@ -1,0 +1,11 @@
+<h1 class="mb-5 text-center">Employee info</h1>
+
+<div class="card mb-3">
+
+
+
+</div>
+
+<%= link_to "Edit Document", edit_document_path(@document), class: "btn btn-primary" %>
+<%= link_to "Delete Document", documents_path(@document), class: "btn btn-danger", method: :delete, data: {confirm: "Are you sure to delete this employee?"} %>
+<%= link_to "Back to Document", documents_path, class: "btn btn-outline-primary" %>
