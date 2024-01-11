@@ -38,6 +38,13 @@
       <% end %>
     </div>
 
+    <div class="mb-3 mt-2">
+<!--      <label for="formFile" class="">Default file input example</label>-->
+<!--      <input class="" type="file" id="formFile">-->
+      <%= form.label :image, class: "form-label" %>
+      <%= form.file_field :image, class: "form-control"%>
+    </div>
+
   </div>
   <!--  <button type="submit" class="btn btn-primary">Sign in</button>-->
   <div class="mt-4">
