@@ -17,8 +17,8 @@
       <tr>
         <th scope="col">#</th>
         <th scope="col">Name</th>
-        <th scope="col">document type</th>
-        <th scope="col">employee id</th>
+        <th scope="col">Document type</th>
+        <th scope="col">Employee Name</th>
         <th scope="col"></th>
       </tr>
       </thead>
@@ -28,7 +28,7 @@
           <th scope="row"><%= document.id %></th>
           <td><%= document.name %></td>
           <td><%= document.doc_type %></td>
-          <td><%= document.employee_id %></td>
+          <td><%= link_to document.employee.name, employee_path(document.employee) %></td>
           <td>
             <div class="row gap-1">
               <div class="dropdown">

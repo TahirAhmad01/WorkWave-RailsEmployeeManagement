@@ -16,8 +16,8 @@
       <!--      <label for="inputEmail4">Email</label>-->
       <!--      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">-->
       <%= form.label :doc_type %>
-      <%= form.text_field :doc_type, placeholder: "Document type", class: "form-control" %>
-
+      <%#= form.text_field :doc_type, placeholder: "Document type", class: "form-control" %>
+      <%= form.select :doc_type, options_for_select(Document::DOC_TYPES, selected:document.doc_type), { prompt: "select document type" }, {class: "form-select form-select-md text-capitalize"}%>
       <% if @document.errors.any? %>
         <% @document.errors.full_messages_for(:doc_type).each do |message| %>
           <p class="text-danger"><%= message %></p>
@@ -28,7 +28,8 @@
       <!--      <label for="inputEmail4">Email</label>-->
       <!--      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">-->
       <%= form.label :employee_id %>
-      <%= form.text_field :employee_id, placeholder: "employee id", class: "form-control" %>
+      <%#= form.text_field :employee_id, placeholder: "employee id", class: "form-control" %>
+      <%= form.select :employee_id, options_for_select(Employee.all.map{|employee| [employee.name_with_email, employee.id]}, selected: document.employee_id), { prompt: "Select Employee" }, { class: "form-select form-select-md text-capitalize" } %>
 
       <% if @document.errors.any? %>
         <% @document.errors.full_messages_for(:employee_id).each do |message| %>
