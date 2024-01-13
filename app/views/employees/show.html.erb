@@ -30,17 +30,21 @@
     <div class="row p-4">
       <div>
         <h4>Document info</h4>
-        <div class="row">
-          <% @employee.documents.each do |document| %>
-            <div class="col-md-4">
+
+        <% @employee.documents.each do |document| %>
+          <div class="row mb-3">
+            <div class="col-md-2">
               <% if document.image.attached? %>
                 <%= image_tag document.image, class: "img-fluid" %>
+              <% else %>
+                <%= image_tag "no_photo.jpg", class: "img-fluid" %>
               <% end %>
             </div>
-            <div class="col-md-4"><%= document.name %></div>
-            <div class="col-md-4"><%= document.doc_type %></div>
-          <% end %>
-        </div>
+            <div class="col-md-5"><%= document.name %></div>
+            <div class="col-md-5"><%= document.doc_type %></div>
+          </div>
+        <% end %>
+
       </div>
     </div>
   </div>
