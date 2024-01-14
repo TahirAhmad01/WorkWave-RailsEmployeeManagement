@@ -35,9 +35,9 @@
           <div class="row mb-3">
             <div class="col-md-2">
               <% if document.image.attached? %>
-                <%= image_tag document.image, class: "img-fluid" %>
+                <%= image_tag document.image, class: "img-fluid rounded-4" %>
               <% else %>
-                <%= image_tag "no_photo.jpg", class: "img-fluid" %>
+                <%= image_tag "no_photo.jpg", class: "img-fluid rounded-4" %>
               <% end %>
             </div>
             <div class="col-md-5"><%= document.name %></div>
