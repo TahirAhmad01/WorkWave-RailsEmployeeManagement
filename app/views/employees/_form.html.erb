@@ -60,6 +60,47 @@
     <%= form.label "Address 2" %>
     <%= form.text_field :address_line_2, placeholder: "Address 2", class: "form-control" %>
   </div>
+
+
+
+  <div class="row mt-3">
+    <div class="form-group col-md-4">
+      <!--      <label for="inputCity">City</label>-->
+      <!--      <input type="text" class="form-control" id="inputCity">-->
+      <%= form.label :job_title %>
+      <%= form.text_field :job_title, placeholder: "Job title", class: "form-control" %>
+      <% if @employee.errors.any? %>
+        <% @employee.errors.full_messages_for(:job_title).each do |message| %>
+          <p class="text-danger"><%= message %></p>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="form-group col-md-4">
+      <!--      <label for="inputState">State</label>-->
+      <!--      <input type="text" class="form-control" id="inputCity">-->
+      <%= form.label :date_of_birth %>
+      <%= form.date_field :date_of_birth, placeholder: "Date of birth", class: "form-control" %>
+
+      <% if @employee.errors.any? %>
+        <% @employee.errors.full_messages_for(:date_of_birth).each do |message| %>
+          <p class="text-danger"><%= message %></p>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="form-group col-md-4">
+      <!--      <label for="inputState">State</label>-->
+      <!--      <input type="text" class="form-control" id="inputCity">-->
+      <%= form.label :date_of_joining %>
+      <%= form.date_field :date_of_joining, placeholder: "Date of joining", class: "form-control" %>
+
+      <% if @employee.errors.any? %>
+        <% @employee.errors.full_messages_for(:date_of_joining).each do |message| %>
+          <p class="text-danger"><%= message %></p>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
   <div class="row mt-3">
     <div class="form-group col-md-3">
       <!--      <label for="inputCity">City</label>-->
@@ -104,6 +145,18 @@
 
       <% if @employee.errors.any? %>
         <% @employee.errors.full_messages_for(:pincode).each do |message| %>
+          <p class="text-danger"><%= message %></p>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="form-group col-md-12">
+      <%= form.label :bio %>
+      <%= form.text_area :bio, placeholder: "bio", class: "form-control" %>
+      <% if @employee.errors.any? %>
+        <% @employee.errors.full_messages_for(:bio).each do |message| %>
           <p class="text-danger"><%= message %></p>
         <% end %>
       <% end %>
