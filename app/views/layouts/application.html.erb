@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>EmployeeApp</title>
+  <title>WorkWave - Employee Management App</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
@@ -14,6 +14,18 @@
 <body>
 <%= render "shared/header" %>
 <div class="container py-4">
+  <% if flash[:notice].present? %>
+    <div class="alert alert-success mb-3" role="alert">
+      <%= notice %>
+    </div>
+  <% end %>
+  <% if flash[:alert].present? %>
+    <div class="d-flex justify-content-center">
+      <div class="alert alert-danger mb-3 w-50" role="alert">
+        <%= alert %>
+      </div>
+    </div>
+  <% end %>
   <%= yield %>
 </div>
 
